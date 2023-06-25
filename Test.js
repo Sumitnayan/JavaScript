@@ -22,11 +22,13 @@ const NFT={
     rarity:_rarity,
 };
 NFTs.push(NFT);
-console.log('congratulation your NFT"${NFT.name}"has been minted sucessfully.n');
+console.log("congratulation your NFT name  " + _name + " has been minted sucessfully");
 
 };
 const printNFTs=function (){
     console.log("ALL NFTs:\n");
+    // create a "loop" that will go through an "array" of NFT's
+// and print their metadata with console.log()
     for (let i=0;i< NFTs.length; i++){
         console.log(`ID: ${i + 1}`);
         console.log(`Name: ${NFTs[i].name}`);
@@ -36,13 +38,15 @@ const printNFTs=function (){
     }
     console.log("Finished Printing all NFTS.\n")
 };
+// print the total number of NFTs we have minted to the console
 const getTotalSupply =function(){
-    console.log('Total number of minted NFTs: ${NFTs.length}');
+    console.log('Total number of minted NFTs:' + NFTs.length);
 };
+// call your functions below this line
 mintNFT("NFT 1","Red","Art","Rare");
 mintNFT("NFT 2","Blue","Music","Common");
 mintNFT("NFT 3","Green","Sports","Epic");
 mintNFT("NFT 4","Purple","Collectibles","Legendary");
 printNFTs();
 
-gettotalSupply();
+getTotalSupply();
